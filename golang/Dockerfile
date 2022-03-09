@@ -6,6 +6,6 @@ RUN cd /usr/local/ && \
     /usr/local/go/bin/go env -w GO111MODULE=on && \
     /usr/local/go/bin/go env -w GOPROXY=https://goproxy.cn,direct && \
     mkdir /root/go && \
-    mkdir /root/golang
+    mkdir /root/golang /root/.ssh
 COPY ./bashrc /root/.bashrc
 CMD ["sleep", "999999999999"]
