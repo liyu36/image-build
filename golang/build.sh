@@ -3,7 +3,7 @@
 set -e
 
 image_name="liy36/golang"
-image_tag="1.16.14"
+image_tag="1.16.15"
 
 sed -i "s/image_tag/${image_tag}/" ./Dockerfile
 
