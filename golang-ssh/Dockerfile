@@ -1,5 +1,5 @@
 FROM liy36/ubuntu:20.04
-ENV GO_VERSION="image_tag"
+ENV GO_VERSION="1.16.14"
 RUN cd /usr/local/ && \
     wget -qO - https://golang.google.cn/dl/go${GO_VERSION}.linux-amd64.tar.gz |tar -xzf - && \
     apt update && apt install make automake gcc git  -y && \
