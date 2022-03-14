@@ -10,5 +10,7 @@ RUN cd /usr/local/ && \
 
 RUN apt install -y openssh-server dumb-init && mkdir /run/sshd
 COPY ./bashrc /root/.bashrc
+EXPOSE 22
+EXPOSE 80
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]
 CMD ["/usr/sbin/sshd", "-D"]
