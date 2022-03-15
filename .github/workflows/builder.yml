@@ -21,4 +21,4 @@ jobs:
       - name: Build and Push docker image.
         run: |
           echo "${PASSWORD}" | docker login -u ${USERNAME} --password-stdin ${SERVER}
-          bash build.sh
+          bash build.sh ${SERVER}

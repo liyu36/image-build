@@ -2,7 +2,7 @@
 
 set -e
 
-image_name="liy36/ubuntu"
+image_name="${1}/liy36/ubuntu"
 image_tag="20.04"
 
 docker build . -t ${image_name}:${image_tag}

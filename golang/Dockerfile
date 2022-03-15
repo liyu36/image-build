@@ -1,4 +1,3 @@
-FROM liy36/ubuntu:20.04
 ENV GO_VERSION="image_tag"
 RUN cd /usr/local/ && \
     wget -qO - https://golang.google.cn/dl/go${GO_VERSION}.linux-amd64.tar.gz |tar -xzf - && \
