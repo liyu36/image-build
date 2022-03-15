@@ -1,4 +1,4 @@
-#ubuntu
-#ubuntu-init
-#golang
+ubuntu
+ubuntu-init
+golang
 golang-ssh
