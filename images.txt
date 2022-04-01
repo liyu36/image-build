@@ -1,5 +1,5 @@
-ubuntu
-ubuntu-init
+#ubuntu
+#ubuntu-init
 golang
 golang-ssh
-alpine
+#alpine
