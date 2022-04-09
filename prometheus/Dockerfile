@@ -8,10 +8,11 @@ RUN mkdir /usr/local/prometheus && \
 ENV TSDB_RETENTION_TIME 90d
 ENV TSDB_PATH /apps/storage/tsdb
 ENV CONFIG_FILE /apps/prometheus.yml
+ENV WEB_PAGE_TITLE "Prometheus"
 
 WORKDIR /apps
 VOLUME /apps
 
 EXPOSE 9090
 ENTRYPOINT ["/usr/bin/dumb-init", "--", "/entrypoint.sh"]
-CMD ["/usr/local/prometheus/prometheus", "--storage.tsdb.retention.time=${TSDB_RETENTION_TIME}", "--storage.tsdb.path=${TSDB_PATH}", "--web.enable-lifecycle", "--config.file=${CONFIG_FILE}", "--web.console.libraries=/usr/local/prometheus/console_libraries", "--web.console.templates=/usr/local/prometheus/consoles", "--web.enable-admin-api", "--enable-feature=memory-snapshot-on-shutdown"]
+CMD ["/usr/local/prometheus/prometheus", "--storage.tsdb.retention.time=${TSDB_RETENTION_TIME}", "--storage.tsdb.path=${TSDB_PATH}", "--web.enable-lifecycle", "--config.file=${CONFIG_FILE}", "--web.console.libraries=/usr/local/prometheus/console_libraries", "--web.console.templates=/usr/local/prometheus/consoles", "--web.enable-admin-api", "--enable-feature=memory-snapshot-on-shutdown", "--web.page-title=${WEB_PAGE_TITLE}"]
