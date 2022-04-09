@@ -1,5 +1,6 @@
 #ubuntu
 #ubuntu-init
-golang
-golang-ssh
+#golang
+#golang-ssh
 #alpine
+prometheus
