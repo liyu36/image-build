@@ -1,6 +1,6 @@
 ENV PROM_VERSION="image_tag"
 RUN mkdir /usr/local/prometheus && \
-    cd /usr/local/ && \
+    cd /usr/local/prometheus && \
     wget -qO - https://github.com/prometheus/prometheus/releases/download/v${PROM_VERSION}/prometheus-${PROM_VERSION}.linux-amd64.tar.gz | tar -xzf - --strip-components=1 && \
 ENV TSDB_RETENTION_TIME 90d
 ENV TSDB_PATH /apps/storage/tsdb
