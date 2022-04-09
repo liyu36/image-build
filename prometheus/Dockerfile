@@ -11,13 +11,4 @@ VOLUME /apps
 
 EXPOSE 9090
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]
-CMD [
-    "/usr/local/prometheus/prometheus", 
-    "--storage.tsdb.retention.time=${TSDB_RETENTION_TIME}", 
-    "--storage.tsdb.path=${TSDB_PATH}", 
-    "--web.enable-lifecycle", 
-    "--config.file=${CONFIG_FILE}",
-    "--web.console.libraries=/usr/local/prometheus/console_libraries",
-    "--web.console.templates=/usr/local/prometheus/consoles",
-    "--web.enable-admin-api",
-]
+CMD ["/usr/local/prometheus/prometheus", "--storage.tsdb.retention.time=${TSDB_RETENTION_TIME}", "--storage.tsdb.path=${TSDB_PATH}", "--web.enable-lifecycle", "--config.file=${CONFIG_FILE}", "--web.console.libraries=/usr/local/prometheus/console_libraries", "--web.console.templates=/usr/local/prometheus/consoles", "--web.enable-admin-api"]
