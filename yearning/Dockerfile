@@ -1,4 +1,4 @@
-COPY juno /opt
+#COPY juno /opt
 COPY Yearning /opt/yearning
 COPY entrypoint.sh /entrypoint.sh
 
