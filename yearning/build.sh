@@ -14,6 +14,7 @@ YEARNING_VER="3.0.0-rc11"
 YEARNING_URL="https://github.com/cookieY/Yearning/releases/download/${YEARNING_VER}/Yearning-${YEARNING_VER}-linux-amd64.zip"
 wget -cO yearning.zip $YEARNING_URL && \
     unzip yearning.zip
+pwd ;ls 
 
 docker build . -t ${image_name}:${image_tag}
 docker push ${image_name}:${image_tag}
