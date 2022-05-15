@@ -1,5 +1,3 @@
-FROM alpine:3.15
-
 COPY ./Yearning/Yearning /opt/
 COPY ./Yearning/conf.toml /opt
 
