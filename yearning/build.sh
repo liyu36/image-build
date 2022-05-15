@@ -9,10 +9,8 @@ sed -i "s/image_tag/${image_tag}/" ./Dockerfile
 
 sed -i "1iFROM ${1}/liy36/alpine:3.15" ./Dockerfile
 
-YEARNING_VER="3.0.0-rc11"
-
-YEARNING_URL="https://github.com/cookieY/Yearning/releases/download/${YEARNING_VER}/Yearning-${YEARNING_VER}-linux-amd64.zip"
-wget -cO yearning.zip $YEARNING_URL && \
+YEARNING_URL="https://github.com/cookieY/Yearning/releases/download/v3.0.0-rc11/Yearning-v3.0.0-rc11-linux-amd64.zip"
+wget -cO yearning.zip ${YEARNING_URL} && \
     unzip yearning.zip
 pwd ;ls 
 
