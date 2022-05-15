@@ -1,7 +1,7 @@
 FROM alpine:3.15
 
-COPY /opt/Yearning /opt/Yearning
-COPY /opt/conf.toml /opt/conf.toml
+COPY ./Yearning /opt/Yearning
+COPY ./conf.toml /opt/conf.toml
 
 WORKDIR /opt/
 
